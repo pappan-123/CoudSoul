@@ -45,7 +45,9 @@ class About extends Component {
       <section className="about__container">
         <div className="container">
           <div>
-            <h1>Advance Innovation For IT Solutions</h1>
+            <h1>
+              LEADING THE WAY IN CLOUD, MOBILE AND WEB DEVELOPMENT INTEGRATION
+            </h1>
             <p className="text">
               Empowering businesses with cloud innovation. Seamlessly
               integrating cloud services, web, opp development, and Al solutions

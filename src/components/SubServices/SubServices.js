@@ -16,7 +16,7 @@ export default function SubServices({ title, description,services }) {
   const mainFeaturedPost = {
     title: title,
     description: description,
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: 'https://source.unsplash.com/random?software',
     imageText: 'main image description',
     linkText: 'Continue reading…',
   };

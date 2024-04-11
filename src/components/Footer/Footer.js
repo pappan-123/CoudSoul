@@ -3,16 +3,18 @@ import { CgInstagram } from "react-icons/cg";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 import "./style.css";
+import { Link } from "react-router-dom";
+
 class Footer extends Component {
   render() {
     return (
       <footer id="contact" className="container footer__container">
         <div className="about">
-          <h3>LOGO</h3>
+          <h3>TEK CLOUDSOUL PVT.LTD</h3>
           <p className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe
-            voluptatum repellat placeat aperiam. Molestiae consectetur molestias
-            magni laudantium doloremque!
+            We have proudly expanded our operations beyond our headquarters to
+            serve clients in multiple countries across Asia the Middle East,
+            Europe and North America
           </p>
           <ul className="footer__socials">
             <li>
@@ -36,18 +38,18 @@ class Footer extends Component {
           <h3>Services</h3>
           <ul>
             <li>
-              <a href="#" className="text">
-                Cyber Security
+              <a href="/it-solution" className="text">
+                IT Solutions and Services
               </a>
             </li>
             <li>
-              <a href="#" className="text">
-                IT COnsultant
+              <a href="/cloud-solution" className="text">
+                CORE SERVICES IN CLOUD
               </a>
             </li>
             <li>
-              <a href="#" className="text">
-                Strategy & Research
+              <a href="/software-solution" className="text">
+                Software Development Services
               </a>
             </li>
           </ul>
@@ -57,17 +59,18 @@ class Footer extends Component {
           <ul>
             <li>
               <address className="text">
-                Office: 232 California Road Imperial
+                Office: UK: Office1, The Oaks,Clews RD, Redditch, B98 7ST
+                UnitedKingdom INDIA:South Block, Bahu Plaza, J&K, India
               </address>
             </li>
             <li>
-              <a href="tel:+212698584458" className="text">
-                Tel : +212698584458
+              <a href="tel:+919149623809" className="text">
+                Tel : +919149623809
               </a>
             </li>
             <li>
-              <a href="mailto:lormail@gmail.com" className="text">
-                Email: lormail@gmail.com
+              <a href="mailto:info@techcorltd.co.uk " className="text">
+                Email: info@techcorltd.co.uk 
               </a>
             </li>
           </ul>

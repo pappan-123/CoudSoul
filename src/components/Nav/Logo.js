@@ -6,7 +6,7 @@ class Logo extends Component {
     return (
       <div className="logo">
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h3>LOGO</h3>
+          <h3>TEK CLOUDSOUL PVT.LTD</h3>
         </Link>
       </div>
     );
