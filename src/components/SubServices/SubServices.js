@@ -4,13 +4,14 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MainFeaturedPost from './MainFeaturedPost';
+import SubList from './SubList';
  
 
 
  
 const defaultTheme = createTheme();
 
-export default function SubServices({ title, description }) {
+export default function SubServices({ title, description,services }) {
 
   const mainFeaturedPost = {
     title: title,
@@ -27,6 +28,7 @@ export default function SubServices({ title, description }) {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
         </main>
+        <SubList services={services}/>
       </Container>
     </ThemeProvider>
   );

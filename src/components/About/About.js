@@ -3,23 +3,23 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./style.css";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 import SignUp from "../Form/SignUp";
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: "auto",
-  height:"auto",
-  bgcolor: 'background.paper',
+  height: "auto",
+  bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
-  borderRadius:"10%",
+  borderRadius: "10%",
 };
 
 class About extends Component {
@@ -27,7 +27,7 @@ class About extends Component {
     super();
     this.state = {
       percentage: 75,
-      open: false // Adding open state here
+      open: false, // Adding open state here
     };
   }
 
@@ -47,13 +47,14 @@ class About extends Component {
           <div>
             <h1>Advance Innovation For IT Solutions</h1>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-              eligendi molestiae ex harum, sed animi at aliquam quaerat odit
-              repudiandae dicta veniam, beatae aliquid, voluptatum nostrum saepe
-              doloribus excepturi. Facere!
+              Empowering businesses with cloud innovation. Seamlessly
+              integrating cloud services, web, opp development, and Al solutions
+              for enhanced efficiency and competitiveness.
             </p>
             <div className="about__buttons">
-              <button className="btn btn-primary" onClick={this.handleOpen}>Get In Touch</button>
+              <button className="btn btn-primary" onClick={this.handleOpen}>
+                Get In Touch
+              </button>
               <a href="#services">
                 <span>Our Services</span>
                 <AiOutlineArrowDown />
@@ -85,20 +86,26 @@ class About extends Component {
 
         {/* Modal part */}
         <Modal
-  open={this.state.open}
-  onClose={this.handleClose}
-  aria-labelledby="modal-title"
-  aria-describedby="modal-description"
->
-  <Box sx={style}>
-    <SignUp/>
-    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 2 }}>
-        {/* Use this.handleClose instead of handleClose */}
-        <Button onClick={this.handleClose}>Close</Button>
-      </Box>
-  </Box>
-</Modal>
-
+          open={this.state.open}
+          onClose={this.handleClose}
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
+        >
+          <Box sx={style}>
+            <SignUp />
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                mt: 2,
+              }}
+            >
+              {/* Use this.handleClose instead of handleClose */}
+              <Button onClick={this.handleClose}>Close</Button>
+            </Box>
+          </Box>
+        </Modal>
       </section>
     );
   }

@@ -9,9 +9,7 @@ class ServicesComp extends Component {
       <div className="services__servicesComp">
         <div>
           <h1>Our Servcices For Technology You Need</h1>
-          <Link to="/services">
           <button className="btn btn-primary">Load More</button>
-          </Link>
         </div>
         <div>
         <Link to="/it-solution">
@@ -19,7 +17,7 @@ class ServicesComp extends Component {
             <div className="icon">
               <GrShieldSecurity />
             </div>
-            <h4>IT SOLUTIONS&SERVICES </h4>
+            <h4>IT SOLUTIONS & SERVICES </h4>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </div>
         </Link>
@@ -41,14 +39,14 @@ class ServicesComp extends Component {
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
               </div>
 </Link>
-
+{/* 
           <div>
             <div className="icon">
               <BsLaptop />
             </div>
             <h4>IT Consultant</h4>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     );
