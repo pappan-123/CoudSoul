@@ -1,43 +1,59 @@
 import * as React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const [state, handleSubmit] = useForm("mrgnoezj");
+  const [formData, setFormData] = React.useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+  });
+
+  const notify = () => toast.success('Thank You!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+  });
+
+  React.useEffect(() => {
+    if (state.succeeded) {
+      notify();
+      setFormData({ firstName: '', lastName: '', email: '' }); // Clear fields after success
+    }
+  }, [state.succeeded]);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      alert('Please fill in all fields');
+    } else {
+      handleSubmit(event);  // Using Formspree's handleSubmit function directly after validation
+    }
   };
 
   return (
@@ -55,9 +71,9 @@ export default function SignUp() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Get in Touch
+            Sign Up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={handleFormSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -68,6 +84,8 @@ export default function SignUp() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  value={formData.firstName}
+                  onChange={handleInputChange}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -78,6 +96,8 @@ export default function SignUp() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -87,13 +107,15 @@ export default function SignUp() {
                   id="email"
                   label="Email Address"
                   name="email"
+                  type="email"
                   autoComplete="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
                 />
               </Grid>
             </Grid>
@@ -102,9 +124,23 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              disabled={state.submitting}
             >
-              Ok
+              Sign Up
             </Button>
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              transition={Bounce}
+            />
           </Box>
         </Box>
       </Container>

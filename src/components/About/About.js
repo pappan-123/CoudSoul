@@ -8,19 +8,19 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import SignUp from "../Form/SignUp";
-
+ 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "auto",
-  height: "auto",
+  width: "80vw", 
   bgcolor: "background.paper",
   boxShadow: 24,
-  p: 4,
-  borderRadius: "10%",
+  maxWidth: "400px",  
+  borderRadius:2,
 };
+
 
 class About extends Component {
   constructor() {
@@ -100,10 +100,8 @@ class About extends Component {
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",
-                mt: 2,
               }}
             >
-              {/* Use this.handleClose instead of handleClose */}
               <Button onClick={this.handleClose}>Close</Button>
             </Box>
           </Box>
