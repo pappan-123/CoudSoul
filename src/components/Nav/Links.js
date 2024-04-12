@@ -5,7 +5,6 @@ class Links extends Component {
     super();
     this.links = [
       "home",
-      "about",
       "services",
       "portfolio",
       "testimony",
