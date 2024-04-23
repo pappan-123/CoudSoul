@@ -30,6 +30,7 @@ const App = () => {
           <div>
             <About />
             <Services/>
+            <Services2 />
             <Portfolio />
             <Testimonials />
             <News />
@@ -40,7 +41,7 @@ const App = () => {
         <Route path="/it-solution" element={<It />} />
         <Route path="/cloud-solution" element={<Cloud />} />
         <Route path="/software-solution" element={<Software />} />
-        <Route path="/services" element={<Services2 />} />
+        {/* <Route path="/services" element={<Services2 />} /> */}
       </Routes>
       <Footer />
     </div>
