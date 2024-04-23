@@ -13,7 +13,7 @@ class Testimony extends Component {
           <p className="text">{comment}</p>
           <p className="text">
             <strong style={{ color: "black" }}>{name} / </strong>
-            {occupation}
+            <strong style={{ color: "black" }}>{occupation}</strong>
           </p>
         </div>
       </div>

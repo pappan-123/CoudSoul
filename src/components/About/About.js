@@ -66,7 +66,7 @@ class About extends Component {
           <div style={{ position: "relative" }}>
             <div className="about__image">
               <img
-                src="https://st4.depositphotos.com/17586788/i/600/depositphotos_247586928-stock-photo-a-successful-business-girl-in.jpg"
+                src="https://res.cloudinary.com/dxllpuliy/image/upload/v1713875282/WhatsApp_Image_2024-04-23_at_5.57.44_PM_puy9wf.jpg"
                 alt="about"
               />
             </div>

@@ -11,28 +11,28 @@ class Testimonials extends Component {
       slidesPerView: 2.5,
       reviews: [ // Expanded array of reviews
         {
-          img: 'https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg',
+          img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/3acce801-3fea-4bb9-bdaa-6229d2f714be_oqjhb8.jpg',
           comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
-          name: 'Alex Johnson',
-          occupation: 'Software Engineer'
+          name: 'Tanvinder Singh',
+          occupation: 'Cloud Expert'
         },
         {
-          img: 'https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg',
+          img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/37ddc39a-7691-48e4-ae7e-456910c77817_clgrh1.jpg',
           comment: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-          name: 'Maria Garcia',
-          occupation: 'Graphic Designer'
+          name: 'Angat Singh',
+          occupation: 'Internal Firm Affair'
         },
         {
-          img: 'https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg',
+          img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/2f7b8a02-b894-4c0f-a8a4-d74e62e85ce3_yvknal.jpg',
           comment: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          name: 'David Smith',
-          occupation: 'Marketing Specialist'
+          name: 'Trivinder Singh',
+          occupation: 'Market Expert'
         },
         {
-          img: 'https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg',
+          img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/3e7e7f97-c5aa-4084-9cc8-faff944a8927_vv9jii.jpg',
           comment: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.',
-          name: 'Emma Brown',
-          occupation: 'Product Manager'
+          name: 'Tandeep Singh',
+          occupation: 'Software Expert'
         }
         // You can add more reviews as needed
       ]
@@ -64,7 +64,7 @@ class Testimonials extends Component {
 
     return (
       <section id="testimony" className="container container__testimonials">
-        <h1 className="container">What People Say About Us</h1>
+        <h1 className="container">Meet Our Team</h1>
         <Swiper
           className="testimonials__slide container"
           slidesPerView={slidesPerView}
