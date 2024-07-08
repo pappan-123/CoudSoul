@@ -17,7 +17,7 @@ class Intro extends Component {
           <div className="services__intro__image">
             <img
               src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-              alt=""
+              alt="IT Services"
             />
           </div>
           <Swiper
@@ -32,29 +32,25 @@ class Intro extends Component {
               <div className="icon">
                 <BiBrain />
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              <p>Expert IT solutions tailored to your business needs.</p>
             </SwiperSlide>
             <SwiperSlide>
               <div className="icon">
                 <BiBrain />
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              <p>Innovative software development for competitive advantage.</p>
             </SwiperSlide>
           </Swiper>
         </div>
         <div>
           <div className="services__intro__text">
-            <h1>We are the solutions for IT problems</h1>
+            <h1>Your Partner in IT Solutions</h1>
             <p className="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsam
-              asperiores voluptatibus sequi officiis minus? Eligendi explicabo
-              sequi esse a unde ducimus omnis iure odit dolores, labore tenetur
-              totam inventore eveniet dolorem.
+              At our company, we specialize in delivering top-tier IT solutions and software development services. Our team is dedicated to providing custom solutions that enhance your business efficiency, drive innovation, and improve overall performance.
             </p>
             <Link to="/services">
-            <button className="btn btn-primary">More About</button>
+              <button className="btn btn-primary">More About</button>
             </Link>
-           
           </div>
         </div>
       </div>

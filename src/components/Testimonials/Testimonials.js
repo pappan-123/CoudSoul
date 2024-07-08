@@ -28,12 +28,12 @@ class Testimonials extends Component {
           name: 'Trivinder Singh',
           occupation: 'Market Expert'
         },
-        {
-          img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/3e7e7f97-c5aa-4084-9cc8-faff944a8927_vv9jii.jpg',
-          comment: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.',
-          name: 'Tandeep Singh',
-          occupation: 'Software Expert'
-        }
+        // {
+        //   img: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/3e7e7f97-c5aa-4084-9cc8-faff944a8927_vv9jii.jpg',
+        //   comment: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.',
+        //   name: 'Tandeep Singh',
+        //   occupation: 'Software Expert'
+        // }
         // You can add more reviews as needed
       ]
     };

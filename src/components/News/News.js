@@ -19,40 +19,40 @@ class News extends Component {
     super();
     this.hotNews = [
       {
-        title: "Great Technology Solution",
+        title: "Revolutionizing AI Solutions",
         avatar:
-          "https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg",
+          "https://res.cloudinary.com/dxllpuliy/image/upload/v1720292253/premium_photo-1681121353159-3278949ff491_l4bbwv.jpg",
         text:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
-        author: "Randi Saputra",
-        role: "IT Consultant"
+          "Our cutting-edge AI solutions are transforming industries by automating processes, enhancing decision-making, and delivering personalized experiences. Join us in leading the AI revolution.",
+        author: "Sudipta Saputra",
+        role: "AI Consultant"
       },
       {
-        title: "Great Technology Solution",
+        title: "Innovative Software Development",
         avatar:
-          "https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg",
+          "https://res.cloudinary.com/dxllpuliy/image/upload/v1713873541/3e7e7f97-c5aa-4084-9cc8-faff944a8927_vv9jii.jpg",
         text:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic praesentium sunt incidunt quasi eos? Expedita temporibus dolorum nisi ratione harum quae suscipit, distinctio repellat in! Vero quisquam delectus nemo incidunt commodi perferendis repellendus quaerat, pariatur quidem itaque blanditiis magni.",
-        author: "Randi Saputra",
-        role: "IT Consultant"
+          "We provide top-notch software development services that cater to various business needs. From custom applications to robust software platforms, our solutions drive efficiency and innovation.",
+        author: "Tandeep Singh",
+        role: "Software Engineer"
       }
     ];
-    this.lastestNews = [
+    this.latestNews = [
       {
         img:
-          "https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg",
-        date: "30 March 2022",
-        author: "Admin",
+          "https://res.cloudinary.com/dxllpuliy/image/upload/v1720292038/premium_photo-1668473366519-ac76b1e8e8d3_l2fshp.jpg",
+        date: "AI",
+        author: "Team",
         text:
-          "When browsers first reached version 10, there were a few issues as the major version number went from one digit to two. Hopefully, we learned a few things that'll ease the transition from two digits to three."
+          "Discover how our AI-driven analytics platform is helping businesses unlock actionable insights from their data, enabling smarter decisions and better outcomes."
       },
       {
         img:
-          "https://reviews.tn/wp-content/uploads/2021/05/original-profile-picture-ideas-man_31.jpg",
-        date: "30 March 2022",
-        author: "Admin",
+          "https://res.cloudinary.com/dxllpuliy/image/upload/v1720292129/premium_photo-1676150789916-2c7d1fdda6b9_mkpo2w.jpg",
+        date: "Software",
+        author: "Team",
         text:
-          "Routing is one of the essential aspects of single-page applications (SPAs), but because React doesn’t come with a routing solution."
+          "Learn about our latest software release that integrates seamlessly with existing systems, providing enhanced functionality and improved user experience for our clients."
       }
     ];
   }
@@ -62,24 +62,24 @@ class News extends Component {
         <Swiper className="news__hot" pagination={true} modules={[Pagination]}>
           {this.hotNews.map((feed, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <HotNews
                   title={feed.title}
                   text={feed.text}
                   avatar={feed.avatar}
                   author={feed.author}
                   role={feed.role}
-                  key={index}
                 />
               </SwiperSlide>
             );
           })}
         </Swiper>
         <div className="news__latest">
-          <h1>Get The Latest News Here</h1>
-          {this.lastestNews.map((feed) => {
+          <h1>What our CEO says</h1>
+          {this.latestNews.map((feed, index) => {
             return (
               <LatestNews
+                key={index}
                 img={feed.img}
                 date={feed.date}
                 author={feed.author}
@@ -92,4 +92,5 @@ class News extends Component {
     );
   }
 }
+
 export default News;

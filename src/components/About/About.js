@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import SignUp from "../Form/SignUp";
- 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -18,16 +18,15 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   maxWidth: "400px",  
-  borderRadius:2,
+  borderRadius: 2,
 };
-
 
 class About extends Component {
   constructor() {
     super();
     this.state = {
       percentage: 75,
-      open: false, // Adding open state here
+      open: false,
     };
   }
 
@@ -50,7 +49,7 @@ class About extends Component {
             </h1>
             <p className="text">
               Empowering businesses with cloud innovation. Seamlessly
-              integrating cloud services, web, opp development, and Al solutions
+              integrating cloud services, web, opp development, and AI solutions
               for enhanced efficiency and competitiveness.
             </p>
             <div className="about__buttons">
@@ -64,10 +63,14 @@ class About extends Component {
             </div>
           </div>
           <div style={{ position: "relative" }}>
-            <div className="about__image">
-              <img
-                src="https://res.cloudinary.com/dxllpuliy/image/upload/v1713875282/WhatsApp_Image_2024-04-23_at_5.57.44_PM_puy9wf.jpg"
+            <div className="about__video">
+              <video
+                src="https://res.cloudinary.com/dxllpuliy/video/upload/v1720285652/2516160-hd_1920_1080_24fps_bersas.mp4"
                 alt="about"
+                autoPlay
+                muted
+                loop
+                style={{ width: "100%", borderRadius: "15px" }}
               />
             </div>
             <div className="about__progress">

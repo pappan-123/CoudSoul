@@ -8,38 +8,38 @@ class ServicesComp extends Component {
     return (
       <div className="services__servicesComp">
         <div>
-          <h1>Our Servcices For Technology You Need</h1>
+          <h1>Our Services For The Technology You Need</h1>
           <button className="btn btn-primary">Load More</button>
         </div>
         <div>
-        <Link to="/it-solution">
-        <div>
-            <div className="icon">
-              <GrShieldSecurity />
-            </div>
-            <h4>IT SOLUTIONS & SERVICES </h4>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-        </Link>
-        <Link to="/cloud-solution">
-        <div>
-            <div className="icon">
-              <BsLaptop />
-            </div>
-            <h4>CLOUD SOLUTIONS & SERVICES </h4>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-        </Link>
-    <Link to="/software-solution">
-    <div>
-                <div className="icon">
-                  <GrShieldSecurity />
-                </div>
-                <h4>SOFTWARE DEVELOPMENT</h4>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <Link to="/it-solution">
+            <div>
+              <div className="icon">
+                <GrShieldSecurity />
               </div>
-</Link>
-{/* 
+              <h4>IT Solutions & Services</h4>
+              <p>Comprehensive IT solutions to enhance your business operations.</p>
+            </div>
+          </Link>
+          <Link to="/cloud-solution">
+            <div>
+              <div className="icon">
+                <BsLaptop />
+              </div>
+              <h4>Cloud Solutions & Services</h4>
+              <p>Scalable and secure cloud solutions for modern enterprises.</p>
+            </div>
+          </Link>
+          <Link to="/software-solution">
+            <div>
+              <div className="icon">
+                <GrShieldSecurity />
+              </div>
+              <h4>Software Development</h4>
+              <p>Custom software development to meet your unique business needs.</p>
+            </div>
+          </Link>
+          {/* 
           <div>
             <div className="icon">
               <BsLaptop />
