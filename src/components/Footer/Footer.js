@@ -38,18 +38,23 @@ class Footer extends Component {
           <h3>Services</h3>
           <ul>
             <li>
-              <a href="/it-solution" className="text">
-                IT Solutions and Services
+              <a href="/Maintenance-Services" className="text">
+              Maintenance Services
               </a>
             </li>
             <li>
-              <a href="/cloud-solution" className="text">
-                CORE SERVICES IN CLOUD
+              <a href="/Data-Center-Services" className="text">
+              Data Center Services
               </a>
             </li>
             <li>
-              <a href="/software-solution" className="text">
-                Software Development Services
+              <a href="/Professional_Services" className="text">
+              Professional Services
+              </a>
+            </li>
+            <li>
+              <a href="/Software_Design_Development" className="text">
+              Software Design & Development
               </a>
             </li>
           </ul>

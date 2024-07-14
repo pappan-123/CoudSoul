@@ -48,9 +48,9 @@ class Intro extends Component {
             <p className="text">
               At our company, we specialize in delivering top-tier IT solutions and software development services. Our team is dedicated to providing custom solutions that enhance your business efficiency, drive innovation, and improve overall performance.
             </p>
-            <Link to="/services">
+            {/* <Link to="/services">
               <button className="btn btn-primary">More About</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

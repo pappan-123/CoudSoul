@@ -7,18 +7,17 @@ import MainFeaturedPost from './MainFeaturedPost';
 import SubList from './SubList';
  
 
-
- 
 const defaultTheme = createTheme();
 
-export default function SubServices({ title, description,services }) {
+export default function SubServices({ title, description,services,blog }) {
 
   const mainFeaturedPost = {
     title: title,
     description: description,
-    image: 'https://source.unsplash.com/random?software',
+    image: 'https://res.cloudinary.com/dxllpuliy/image/upload/v1713875282/WhatsApp_Image_2024-04-23_at_5.57.44_PM_puy9wf.jpg',
     imageText: 'main image description',
     linkText: 'Continue reading…',
+    blog: blog,
   };
 
   return (
@@ -32,4 +31,4 @@ export default function SubServices({ title, description,services }) {
       </Container>
     </ThemeProvider>
   );
-}
+};

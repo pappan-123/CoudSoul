@@ -6,37 +6,53 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-export default function SubList({services}) {
+const StyledListItem = styled(ListItem)(({ theme }) => ({
+  animation: 'fadeInUp 0.5s ease-in-out',
+  '@keyframes fadeInUp': {
+    from: {
+      opacity: 0,
+      transform: 'translateY(20px)',
+    },
+    to: {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+}));
+
+export default function SubList({ services }) {
+  const trigger = useScrollTrigger();
+
   return (
-    <List sx={{ width: '100%', maxWidth: 500, bgcolor: 'background.paper' }}>
-      {services.map((service, index) => (
-        <React.Fragment key={index}>
-          <ListItem alignItems="flex-start">
-            <ListItemAvatar>
-              {/* Placeholder for avatar; you might want to customize this part */}
-              <Avatar alt={`Service Avatar ${index}`} src={`/static/images/avatar/${index + 1}.jpg`} />
-            </ListItemAvatar>
-            <ListItemText
-              primary={service}
-              secondary={
-                <React.Fragment>
-                  <Typography
-                    sx={{ display: 'inline' }}
-                    component="span"
-                    variant="body2"
-                    color="text.primary"
-                  >
+    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <Grid container spacing={2}>
+        {services.map((service, index) => (
+          <Grid item xs={12} sm={6} key={index}>
+            <StyledListItem alignItems="flex-start" style={{ animationDelay: `${index * 0.1}s` }}>
+              <ListItemAvatar>
+                <Avatar alt={`Service Avatar ${index}`} src={`/static/images/avatar/${index + 1}.jpg`} />
+              </ListItemAvatar>
+              <ListItemText
+                primary={
+                  <Typography variant="h6" component="span" color="error">
+                    {service.title}
                   </Typography>
-                  {/* Placeholder for secondary text; customize as needed */}
-                  {" — More details about this service..."}
-                </React.Fragment>
-              }
-            />
-          </ListItem>
-          {index < services.length - 1 && <Divider variant="inset" component="li" />}
-        </React.Fragment>
-      ))}
+                }
+                secondary={
+                  <Typography variant="body2" color="text.secondary">
+                    {service.description}
+                  </Typography>
+                }
+              />
+            </StyledListItem>
+            {index < services.length - 1 && <Divider variant="inset" component="li" />}
+          </Grid>
+        ))}
+      </Grid>
     </List>
   );
 }

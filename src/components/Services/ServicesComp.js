@@ -9,44 +9,45 @@ class ServicesComp extends Component {
       <div className="services__servicesComp">
         <div>
           <h1>Our Services For The Technology You Need</h1>
-          <button className="btn btn-primary">Load More</button>
+          {/* <button className="btn btn-primary">Load More</button> */}
         </div>
         <div>
-          <Link to="/it-solution">
+          <a href="/Maintenance-Services">
             <div>
               <div className="icon">
                 <GrShieldSecurity />
               </div>
-              <h4>IT Solutions & Services</h4>
-              <p>Comprehensive IT solutions to enhance your business operations.</p>
+              <h4>Maintenance Services</h4>
+              <p>Maintenance Services, Break Fix, Asset Management</p>
             </div>
-          </Link>
-          <Link to="/cloud-solution">
+          </a>
+          <a href="/Data-Center-Services">
             <div>
               <div className="icon">
                 <BsLaptop />
               </div>
-              <h4>Cloud Solutions & Services</h4>
-              <p>Scalable and secure cloud solutions for modern enterprises.</p>
+              <h4>Data Center Services</h4>
+              <p>Data Centre Services, Server Maintenance, Storage Maintenance, Network Maintenance</p>
             </div>
-          </Link>
-          <Link to="/software-solution">
+          </a>
+          <a href="/Professional_Services">
             <div>
               <div className="icon">
                 <GrShieldSecurity />
               </div>
-              <h4>Software Development</h4>
-              <p>Custom software development to meet your unique business needs.</p>
+              <h4>Professional Services</h4>
+              <p>Wi-Fi Surveys, On-Site Engineering Resources, Wi-Fi Surveys, Migration, IMAC, ITAD</p>
             </div>
-          </Link>
-          {/* 
-          <div>
-            <div className="icon">
-              <BsLaptop />
+          </a>
+          <a href="/Software_Design_Development">
+            <div>
+              <div className="icon">
+                <BsLaptop />
+              </div>
+              <h4>Software Design & Development</h4>
+              <p>Software Development, Web Development, App Development, Graphic Design, Digital Marketing</p>
             </div>
-            <h4>IT Consultant</h4>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div> */}
+          </a>
         </div>
       </div>
     );
