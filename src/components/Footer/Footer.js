@@ -69,8 +69,12 @@ class Footer extends Component {
               </address>
             </li>
             <li>
-              <a href="tel:+919149623809" className="text">
-                Tel : +919149623809
+              <a href="tel:+916005561860" className="text">
+                Tel : +916005561860
+              </a>
+              /
+              <a href="tel:+447760741208" className="text">
+                  +447760741208
               </a>
             </li>
             <li>
